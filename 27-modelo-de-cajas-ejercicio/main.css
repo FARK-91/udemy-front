@@ -1,0 +1,39 @@
+body{
+    background-color: #eee;
+}
+
+.caja{
+    background-color: #fff;
+    margin: 0 10px;
+    border: outset;
+}
+
+.caja__header{
+    padding: 10px;
+}
+
+.caja__content{
+    padding: 10px;
+    border-top: 1px solid gray;
+}
+
+.caja__footer{
+    padding: 10px;
+    border-top: 1px solid gray;
+}
+
+.button-submit{
+    background-color: #aaf;
+    border-color: #aaf;
+    border-style: solid;
+    color: #fff;
+    padding: 6px;
+}
+
+.button-dismiss{
+    background-color: gray;
+    border-color: gray;
+    border-style: solid;
+    color: #000;
+    padding: 6px;
+}

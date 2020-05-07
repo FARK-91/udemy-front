@@ -1,0 +1,16 @@
+body{
+    background-color: #eee;
+}
+
+.caja{
+    margin: 8px;
+    border-style: dashed;
+    border-width: 5px;
+    border-color: #faa;
+    border-radius: 8px;
+    padding: 8px;
+    background-color: #aaf;
+    height: 220px;
+    width: 220px;
+    color: gray;
+}
