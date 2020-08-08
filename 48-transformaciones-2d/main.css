@@ -1,0 +1,24 @@
+body{
+    background-color: #eee;
+}
+
+.box{
+	position: relative;
+	left: 100px;
+	top: 100px;
+	width: 100px;
+	height: 100px;
+	background-color: white;
+	box-shadow: 1px 2px 2px rgba(0,0,0,0.2);
+}
+
+.box:hover{
+	transform: scale(3.05, 3.05); Esta propiedad sirve para alterar el tamano del elemento*/
+	/*transform: scaleY(3.05); Esta propiedad sirve para alterar el tamano del elemento en el eje Y*/
+	/*transform: scaleX(3.05); Esta propiedad sirve para alterar el tamano del elemento en el eje X*/
+	/*transform: rotate(45deg); Esta propiedad sirve para rotar el elemento sobre su eje X*/
+	/*transform: translate(50px, 10px); Esta propiedad sirve para mover de posicion el elemento donde (X,Y)*/
+	/*transform: skewX(25deg); Esta propiedad sirve para dar inclinacion al eje X mientras que el Y se mantiene paralelo a la parte superior e inferior de la pantalla*/
+	/*transform: skewY(10deg); Esta propiedad sirve para dar inclinacion al eje Y mientras que el X se mantiene paralelo a la parte superior e inferior de la pantalla*/
+	/*transform: skew(10deg, 25deg); Esta propiedad sirve para dar inclinacion al eje (X,Y) del elemento*/
+}

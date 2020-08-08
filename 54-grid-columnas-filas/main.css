@@ -1,0 +1,28 @@
+body{
+    background-color: #eee;
+}
+
+.grid-rows{
+	display: grid;
+	grid-template-rows: 50px 100px 30px;
+}
+
+.inline-grid-rows{
+	display: inline-grid;
+	grid-template-rows: 90px 34px 20%;
+}
+
+.grid-columns{
+	display: grid;
+	grid-template-columns: 25% 15% 60%;
+}
+
+.grid-columns-fr{
+	display: grid;
+	grid-template-columns: 1fr 2fr 3fr 2fr;
+}
+
+.element{
+	background-color: white;
+	border: 1px dotted red;
+}
