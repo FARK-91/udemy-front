@@ -1,0 +1,40 @@
+body{
+    background-color: #eee;
+}
+
+.grid{
+	display: grid;
+	grid-template-areas: "header header"
+						  "content sidebar"
+						  "footer footer";
+	grid-template-rows: 35px 1fr 75px;
+	grid-template-columns: 2fr 1fr;
+	justify-items: stretch;
+	align-items: center;
+	border: 1px dotted blue;
+}
+
+.header{
+	background-color: white;
+	border: 1px dotted red;
+}
+
+.content{
+	background-color: white;
+	border: 1px dotted red;
+}
+
+.sidebar{
+	background-color: white;
+	border: 1px dotted red;
+}
+
+.footer{
+	background-color: white;
+	border: 1px dotted red;
+}
+
+.element{
+	background-color: white;
+	border: 1px dotted red;
+}
