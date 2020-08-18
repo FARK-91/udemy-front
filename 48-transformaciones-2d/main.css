@@ -13,7 +13,7 @@ body{
 }
 
 .box:hover{
-	transform: scale(3.05, 3.05); Esta propiedad sirve para alterar el tamano del elemento*/
+	transform: scale(3.05, 3.05); /*Esta propiedad sirve para alterar el tamano del elemento*/
 	/*transform: scaleY(3.05); Esta propiedad sirve para alterar el tamano del elemento en el eje Y*/
 	/*transform: scaleX(3.05); Esta propiedad sirve para alterar el tamano del elemento en el eje X*/
 	/*transform: rotate(45deg); Esta propiedad sirve para rotar el elemento sobre su eje X*/
