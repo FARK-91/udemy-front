@@ -1,0 +1,55 @@
+body{
+    background-color: #eee;
+}
+
+.justify-end{
+	display: flex;
+	justify-content: flex-end;
+	border: 1px dotted blue;
+}
+
+.justify-center{
+	display: flex;
+	justify-content: center;
+	border: 1px dotted blue;
+}
+
+.justify-space-around{
+	display: flex;
+	justify-content: space-around;
+	border: 1px dotted blue;
+}
+
+.justify-space-between{
+	display: flex;
+	justify-content: space-between;
+	border: 1px dotted blue;
+}
+
+.justify-space-evenly{
+	display: flex;
+	justify-content: space-evenly;
+	border: 1px dotted blue;
+}
+
+
+
+
+.align-end{
+	display: flex;
+	align-items: flex-end;
+	border: 1px dotted blue;
+	height: 90px;
+}
+
+.align-center{
+	display: flex;
+	align-items: center;
+	border: 1px dotted blue;
+	height: 90px;
+}
+
+
+.element{
+	border: 1px solid red;
+}

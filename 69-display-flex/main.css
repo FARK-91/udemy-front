@@ -1,0 +1,39 @@
+body{
+    background-color: #eee;
+}
+
+.flex-default{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: no-wrap;
+}
+
+.flex-column{
+	display: flex;
+	flex-direction: column;
+	flex-wrap: no-wrap;
+}
+
+.flex-row-reverse{
+	display: flex;
+	flex-direction: row-reverse;
+}
+
+.flex-column-reverse{
+	display: flex;
+	flex-direction: column-reverse;
+}
+
+.flex-wrap{
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.flex-flow{
+	display: flex;
+	flex-flow: row-reverse wrap;
+}
+
+.element{
+	border: 1px solid red;
+}
