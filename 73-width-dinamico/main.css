@@ -1,0 +1,44 @@
+body{
+    background-color: #eee;
+}
+
+.justify-end{
+	display: flex;
+	justify-content: flex-end;
+	border: 1px dotted blue;
+	height: 200px;
+}
+
+.end1{
+	flex-grow: 1;
+	border: 1px solid red;
+}
+
+.center4{
+	flex-grow: 3;
+	border: 1px solid red;
+}
+
+.justify-center{
+	display: flex;
+	justify-content: center;
+	border: 1px dotted blue;
+}
+
+.justify-space-around{
+	display: flex;
+	justify-content: space-around;
+	border: 1px dotted blue;
+}
+
+.justify-space-between{
+	display: flex;
+	justify-content: space-between;
+	border: 1px dotted blue;
+}
+
+.justify-space-evenly{
+	display: flex;
+	justify-content: space-evenly;
+	border: 1px dotted blue;
+}
