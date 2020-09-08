@@ -1,0 +1,8 @@
+pasos para iniciar node server en express:
+
+1. mkdir node-server
+2. cd node-server/
+3. npm init -y
+4. npm i -S express
+5. touch index.js
+6. node index.js
