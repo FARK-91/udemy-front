@@ -1,0 +1,24 @@
+pasos para iniciar con el proveedor vercel: NO ejecutes los comandos en modo root.
+
+1. Ir a https://vercel.com/download.
+2. npm i -g vercel.
+3. En tu carpeta personal de desarrollo inicia un nuevo proyecto con: vercel init nombre-proyecto.
+4. Entrar al directorio y lanzar el comando vercel.
+5. Configuramos para sincronizar el repo.
+
+Set up and deploy “~/develop/PLATZI/GitHub/udemy/u-frontend/126-vercel/serverless”? [Y/n] y
+? Which scope do you want to deploy to? Renier Ferrer
+? Link to existing project? [y/N] n
+? What’s your project’s name? serverless
+? In which directory is your code located? ./
+No framework detected. Default Project Settings:
+- Build Command: `npm run vercel-build` or `npm run build`
+- Output Directory: `public` if it exists, or `.`
+- Development Command: None
+? Want to override the settings? [y/N] n
+🔗  Linked to fark-91/serverless (created .vercel and added it to .gitignore)
+🔍  Inspect: https://vercel.com/fark-91/serverless/5fd979ajm [1s]
+✅  Production: https://serverless-blond-xi.vercel.app [copied to clipboard] [9s]
+📝  Deployed to production. Run `vercel --prod` to overwrite later (https://vercel.link/2F).
+💡  To change the domain or build command, go to https://vercel.com/fark-91/serverless/settings
+
