@@ -1,0 +1,10 @@
+Para iniciar el trabajo de nuestra app, necesitamos instalar ciertas dependencias.
+
+Desde la consola:
+
+0. Este comando se debe ejecutar dentro de la carpeta del proyecto por ejemplo serverless.
+1. npm i -S express mongoose body-parser cors
+1.1 express: es nuestro servicio para construir el API.
+1.2 mongoose: Serie de parametros necesarios para conectar a la BD creada en Mongo.
+1.3 body-parser: Permite convertir las perticiones a formato json para que mongo las pueda procesar.
+1.4 cors: Permite hacer peticiones desde otro dominio, por ejemplo desde localhost, como es un parametro booleano que se activa y desactiva, es muy util habilitarlo cuando se este desarrollando.
