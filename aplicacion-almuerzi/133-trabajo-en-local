@@ -1,0 +1,14 @@
+Para desplegar el modulo en local y trabaja con mayor comodidad, debemos hacer lo siguiente:
+
+1- Desde la terminal y dentro del proyecto en este caso serverless
+2- Hacer login hacia vercel con el comnando > vercel login Luego de esto debes confirmar un correo que te llega.
+3- Ahora bajamos nuestra variable de entorno configurada anteriormente
+    con el comando > vercel env pull
+4- Se descargara un nuevo archivo llamado .env
+5- Debemos crear un nuevo archivo llamado vercel.json el cual debemos configurar con los siguientes parametros:
+    {
+        "rewrites": [
+            { "source": "/(.*)", "destination": "/api/index" }
+        ]
+    }
+6- Ahora descargamos todas las utilidades de desarrollo de vercel con el comando > vercel dev
