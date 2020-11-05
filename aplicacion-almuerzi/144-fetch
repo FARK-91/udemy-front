@@ -1,0 +1,27 @@
+- Estructura basica de Fetch: Ejemplo
+
+window.onload = () => {
+	fetch('https://serverless.fark-91.vercel.app/api/meals', {
+
+	})
+	.then(response => response.json())
+	.then(data => console.log(data))
+}
+
+- Fetch con parametros y headers: Ejemplo
+
+window.onload = () => {
+	fetch('https://serverless.fark-91.vercel.app/api/meals', {
+		method: 'GET', // POST, PUT, DELETE
+		mode: 'cors',
+		cache: no-cache,
+		credentials: 'same-origin',
+		headers: {
+			Content-Type: 'application-json'
+		},
+		redirect: 'follow',
+		body: JSON.stringify({user: 'Chanchito', passwd: 'Feliz'})
+	})
+	.then(response => response.json())
+	.then(data => console.log(data))
+}

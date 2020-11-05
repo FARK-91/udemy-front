@@ -1,0 +1,9 @@
+Todo en modo NO root:
+
+- vercel: Para subir todos los cambios de mi local a la nube (Vercel).
+
+- vercel dev: Para iniciar servicio localmente
+
+Para iniciar servidor generico de node:
+
+- node index.js
