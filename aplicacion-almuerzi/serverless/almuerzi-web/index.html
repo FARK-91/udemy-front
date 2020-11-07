@@ -1,23 +1,38 @@
 <html>
     <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Almuerzi web</title>
         <link rel="stylesheet" href="style.css" type="text/css"/>
     </head>
     <body>
-        <div id="meals">
-            <ul id="meals-list">
-                <p>Cargando...</p>
-            </ul>
-            <form id="order">
-                <input id="meals-id" type="hidden"/>
-                <input id="submit" type="submit" disabled/>
+        <div class="main-form">
+            <p class="title-form">Iniciar sesión</p>
+            <form class="login-form">
+                <p>Email</p>
+                <input placeholder="John@doe.com">
+                <p>Password</p>
+                <input placeholder="Password">
+                <input class="login-button" type="submit" value="Enviar">
             </form>
         </div>
-        <div id="orders">
-            <ul id="orders-list">
-                <p>Cargando...</p>
-            </ul>
-        </div>
+
+        <template id="orders-view">
+            <div id="meals">
+                <ul id="meals-list">
+                    <p>Cargando...</p>
+                </ul>
+                <form id="order">
+                    <input id="meals-id" type="hidden"/>
+                    <input id="submit" type="submit" disabled/>
+                </form>
+            </div>
+            <div id="orders">
+                <ul id="orders-list">
+                    <p>Cargando...</p>
+                </ul>
+            </div>
+        </template>
     </body>
     <script src="main.js"></script>
 </html>

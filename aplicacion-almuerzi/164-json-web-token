@@ -1,0 +1,5 @@
+- Para encriptar y desencriptar password debemos usar el paquete nativo de node.js jsonwebtoken
+
+- Instalacion desde la consolaL
+
+npm i -s jsonwebtoken

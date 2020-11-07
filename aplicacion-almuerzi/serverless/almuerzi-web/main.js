@@ -1,4 +1,6 @@
 let globalMeal = []
+let route = 'login' // login, register, orders
+
 const stringToHtml = (string) => {
     const parser = new DOMParser()
     const doc = parser.parseFromString(string, 'text/html')
@@ -27,7 +29,7 @@ const renderOrder = (order, meals) => {
     return element
 }
 
-window.onload = () => {
+const initialize = () => {
     const orderForm = document.getElementById('order')
     orderForm.onsubmit = (e) => {
         e.preventDefault()
@@ -59,7 +61,9 @@ window.onload = () => {
             submit.removeAttribute('disable')
         })
     }
+}
 
+const fetchData = () => {
     // Get Meals
 	fetch('https://serverless.fark-91.vercel.app/api/meals', {
 	})
@@ -82,8 +86,11 @@ window.onload = () => {
             const listOrder = ordersData.map(orderData => renderOrder(orderData, data))
             ordersList.removeChild(ordersList.firstElementChild)
             listOrder.forEach(element => ordersList.appendChild(element))
-
-            // console.log(ordersData)
         })
     })
+}
+
+window.onload = () => {
+    // initialize()
+    // fetchData()
 }

@@ -1,6 +1,8 @@
 body{
     background-color: #eee;
     display: flex;
+    align-items: center;
+    padding: 0 10%;
 }
 
 body div{
@@ -41,4 +43,24 @@ ul{
 
 .selected{
     background-color: #eee;
+}
+
+.main-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-form{
+    display: flex;
+    flex-direction: column;
+}
+
+.login-form p{
+    font-size: 14px;
+}
+
+.login-button{
+    margin-top: 12px;
 }
