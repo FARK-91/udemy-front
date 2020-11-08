@@ -31,7 +31,7 @@ router.post('/register', (req, res) => {
                     password: encryptedPasswd,
                     salt: newSalt
                 })
-                then(() => {
+                .then(() => {
                     res.send('Usuario creado con exito')
                 })
             })
@@ -58,6 +58,7 @@ router.post('/login', (req, res) => {
     })
 })
 
+// Para que el usuario que hace login obtenga sus propios datos.
 router.get('/me', isAuthenticated, (req, res) => {
     res.send(req.user)
 })

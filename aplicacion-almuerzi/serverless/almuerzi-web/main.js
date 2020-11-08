@@ -1,3 +1,5 @@
+// const { get } = require("mongoose")
+
 let globalMeal = []
 let route = 'login' // login, register, orders
 
@@ -46,7 +48,7 @@ const initialize = () => {
             user_id: 'Testing User'
         }
 
-        fetch('https://serverless-pdw0vcuqf.vercel.app/api/orders',{
+        fetch('https://serverless.fark-91.vercel.app//api/orders',{
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -91,6 +93,20 @@ const fetchData = () => {
 }
 
 window.onload = () => {
+    const loginForm = document.getElementById('login-form')
+    loginForm.onsubmit = (e) => {
+        e.preventDefault()
+        const email = document.getElementById('email').value
+        const passwd = document.getElementById('passwd').value
+
+        fetch('https://serverless.fark-91.vercel.app/api/auth/login',{
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ email, password: passwd })
+        })
+    }
     // initialize()
     // fetchData()
 }
