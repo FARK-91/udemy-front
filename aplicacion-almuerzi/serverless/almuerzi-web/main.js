@@ -1,6 +1,7 @@
 // const { get } = require("mongoose")
 
 let globalMeal = []
+let user = {}
 let route = 'login' // login, register, orders
 
 const stringToHtml = (string) => {
@@ -40,18 +41,20 @@ const initialize = () => {
         const mealId = document.getElementById('meals-id').value
         if (!mealId){
             alert('Debe seleccionar al menos un plato.!')
+            submit.removeAttribute('disable')
             return
         }
 
         const order = {
             meal_id: mealId,
-            user_id: 'Testing User'
+            user_id: user._id
         }
 
-        fetch('https://serverless.fark-91.vercel.app//api/orders',{
+        fetch('https://serverless.fark-91.vercel.app/api/orders',{
             method: 'POST',
             headers: {
-                'Content-Type': 'application/json'
+                'Content-Type': 'application/json',
+                authorization: localStorage.getItem('token'),
             },
             body: JSON.stringify(order)
         })
@@ -92,7 +95,26 @@ const fetchData = () => {
     })
 }
 
-window.onload = () => {
+const renderApp = () => {
+    const token = localStorage.getItem('token')
+    if(token){
+        user = JSON.parse(localStorage.getItem('user'))
+        return renderOrders()
+    }
+    renderLogin()
+}
+
+const renderOrders = () => {
+    const ordersView = document.getElementById('orders-view')
+    document.getElementById('app').innerHTML = ordersView.innerHTML
+    initialize()
+    fetchData()
+}
+
+const renderLogin = () => {
+    const loginTemplate = document.getElementById('login-template')
+    document.getElementById('app').innerHTML = loginTemplate.innerHTML
+
     const loginForm = document.getElementById('login-form')
     loginForm.onsubmit = (e) => {
         e.preventDefault()
@@ -105,8 +127,31 @@ window.onload = () => {
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify({ email, password: passwd })
+        }).then(response => response.json())
+        .then(respuesta => {
+            localStorage.setItem('token', respuesta.token)
+            route = 'orders'
+            return respuesta.token
+        })
+        .then(token => {
+            return fetch('https://serverless.fark-91.vercel.app/api/auth/me', {
+                method: 'GET',
+                headers: {
+                    'Content-Type': 'application/json',
+                    authorization: token,
+                },
+            })
+        })
+        .then(x => x.json())
+        .then(fetchedUser => {
+            localStorage.setItem('user', JSON.stringify(fetchedUser))
+            user = fetchedUser
+            renderOrders()
         })
     }
-    // initialize()
-    // fetchData()
+}
+
+window.onload = () => {
+    renderApp()
+
 }

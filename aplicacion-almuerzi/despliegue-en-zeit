@@ -1,0 +1,9 @@
+Usar zeit.co
+
+Instalar paquete npm now:
+
+> npm i -g now
+
+Dentro de un nuevo proyecto crear un carpte da serverless, iniciarlo con npm init -y
+
+> npm init -y

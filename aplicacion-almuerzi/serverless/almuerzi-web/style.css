@@ -1,11 +1,14 @@
 body{
     background-color: #eee;
+}
+
+#app{
     display: flex;
     align-items: center;
     padding: 0 10%;
 }
 
-body div{
+#app div{
     flex-grow: 1;
     background-color: #ffffff;
     margin: 5px;
